@@ -1,3 +1,4 @@
+import DescentEvent
 
 class Vehicle:
     gravity = 100
@@ -76,6 +77,8 @@ class Vehicle:
     def get_status(self, tick):
         # create a return a new DescentEvent object
         # filled in with the state of the vehicle.
+        return DescentEvent(tick, self.velocity, self.fuel, self.altitude, ) # need to fill the get status situation
+        
         pass
 
 
