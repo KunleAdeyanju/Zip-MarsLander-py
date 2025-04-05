@@ -9,7 +9,7 @@ class BurnInputStream:
             except ValueError:
                 print("Must Enter a Number (0-200)")
 
-# Example usage:
+#Example usage:
 # burn_input_stream = BurnInputStream()
 # status = None  # Replace with actual DescentEvent object
 # burn = burn_input_stream.get_next_burn(status)

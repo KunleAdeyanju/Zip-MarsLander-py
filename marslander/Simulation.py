@@ -3,7 +3,7 @@ import random
 from Vehicle import Vehicle
 from BurnDataStream import BurnDataStream
 from OnBoardComputer import OnBoardComputer
-from DescentEvent import DescentEvent
+
 from BurnInputStream import BurnInputStream
 
 
@@ -72,12 +72,12 @@ class Simulation:
             return status.get_status()
         return -1
 
-    @staticmethod
     def main():
         # create a new BurnInputStream
         burnSource = BurnInputStream()
         # create a new Simulation object with a random starting altitude
         game = Simulation(Vehicle(Simulation.random_altitude()))
+        #game = Simulation(Vehicle(5000))
         # pass the new BurnInputStream to the run_simulation method
         result = game.run_simulation(burnSource)
         return result
