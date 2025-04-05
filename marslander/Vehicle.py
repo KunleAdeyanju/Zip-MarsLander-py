@@ -24,7 +24,6 @@ class Vehicle:
         self.fuel = 12000
         self.burn = 0
         self.flying = Vehicle.FLYING
-        pass
 
     def check_final_status(self):
         s = ""
