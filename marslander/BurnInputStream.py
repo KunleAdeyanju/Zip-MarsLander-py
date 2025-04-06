@@ -1,13 +1,17 @@
 class BurnInputStream:
     def get_next_burn(self, status):
         while True:
+            note = "Must Enter a int (0-200)"
             try:
                 tokens = input().split()
                 if tokens:
                     burn = int(tokens[0])
-                    return burn
+                    if 0 <= burn <= 200:
+                        return burn
+                    else:
+                        print(note)
             except ValueError:
-                print("Must Enter a Number (0-200)")
+                print(note)
 
 #Example usage:
 # burn_input_stream = BurnInputStream()
