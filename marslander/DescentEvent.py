@@ -17,3 +17,12 @@ class DescentEvent:
 
     def __str__(self):
         return f"{self.seconds}\t\t{self.velocity}\t\t{self.fuel}\t\t{self.altitude}"
+
+    ##############################################################################################
+    """
+        this is where my changes start
+    
+    """
+
+    def get_fuel(self):
+        return self.fuel

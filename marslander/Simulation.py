@@ -10,7 +10,7 @@ from BurnInputStream import BurnInputStream
 class Simulation:
     # Mars Simulation Source Code.
 
-    version = "2.0"  # The Version of the program
+    version = "2.1"  # The Version of the program
 
     def __init__(self, vehicle):
         self.vehicle = vehicle
