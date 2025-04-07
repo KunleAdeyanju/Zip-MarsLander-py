@@ -73,16 +73,22 @@ class Simulation:
         return -1
 
     def main():
-        # create a new BurnInputStream
-        burnSource = BurnInputStream()
+        ### create a new BurnInputStream
+        # burnSource = BurnInputStream()
         # burnSource = BurnDataStream()
-        
-        # create a new Simulation object with a random starting altitude
+        burn_interval = 0
+        veh = Vehicle(5000)
+        ### create a new Simulation object with a random starting altitude
         #game = Simulation(Vehicle(Simulation.random_altitude()))
-        game = Simulation(Vehicle(5000))
+        game = Simulation(veh)
+
+        burnSource = OnBoardComputer(veh.get_status(burn_interval))
+
         
-        # pass the new BurnInputStream to the run_simulation method
+        ### pass the new BurnInputStream to the run_simulation method
         result = game.run_simulation(burnSource)
+
+        burn_interval +=1
         return result
 
 
